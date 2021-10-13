@@ -1,18 +1,10 @@
 # Compiler Design Mini Project
 
-## Topic
+## Topic: Lyrics Displayer for Spotify
 
-<!-- Lyrics Displayer for Spotify
+## By: Varun Khadayate, Simran Kumari, Kartik Padave
 
-Authors:
-
-Varun Khadayate
-
-Simran Kumari
-
-Kartik Padave
-
-About:
+<!-- About:
 
 Fetches the currently playing song from Spotify on Windows, Linux and macOS and displays the lyrics in the command-line, browser tab or in a [desktop application](https://github.com/SwagLyrics/SwagLyricsGUI).
 Refreshes automatically when song changes. The lyrics are fetched from Genius.
