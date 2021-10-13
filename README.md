@@ -1,8 +1,8 @@
 # Compiler Design Mini Project
 
-Topic:
+## Topic
 
-Lyrics Displayer for Spotify
+<!-- Lyrics Displayer for Spotify
 
 Authors:
 
@@ -162,4 +162,4 @@ original,
   <a href="https://www.youtube.com/watch?v=XcobDTljMdM">
     <img src="https://i.imgur.com/7BVWB99.gif" alt="Watch the video">
   </a>
-</p>
+</p> -->
