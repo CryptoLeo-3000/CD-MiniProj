@@ -1,74 +1,42 @@
 # Compiler Design Mini Project
 
-## Topic: Lyrics Displayer for Spotify
+## Topic
 
-## By: Varun Khadayate, Simran Kumari, Kartik Padave
+Lyrics Displayer for Spotify
 
-<!-- About:
+## By
 
-Fetches the currently playing song from Spotify on Windows, Linux and macOS and displays the lyrics in the command-line, browser tab or in a [desktop application](https://github.com/SwagLyrics/SwagLyricsGUI).
-Refreshes automatically when song changes. The lyrics are fetched from Genius.
-Turns out Deezer already has this feature in-built but with `swaglyrics`, you can have it in Spotify as well.
+Varun Khadayate
 
-I'm mainly trying to build this project as far as I can,
-for practice and to learn and work with more technologies and platforms.
+Simran Kumari
 
-Initially developed this for personal use. Pretty much functionality oriented -- I usually develop something that I
-can see helping me and other users in the same situation.
-Packaged so I can first hand handle production-ready code to an extent and to make
-distribution and usage easier.
+Kartik Padave
 
-## Why SwagLyrics?
+## About
 
-SwagLyrics is the fastest and the most accurate package for getting lyrics.<a href=#footnote1 id=a1><sup>1</sup></a>
+The program is based on use of Regular Expression.
 
-Provided optimal internet, SwagLyrics can fetch lyrics for a track in as less as 0.28s.<a href=#footnote2 id=a2><sup>2</sup></a>
+It Fetches the currently playing song from Spotify on Windows, Linux and macOS and displays the lyrics in the command-line, browser tab or in a desktop application (based on what the user selects).
 
-It also does not require the user to generate any sort of API token (Spotify or Genius) and serves functionality
-right off the bat. This is possible as the song identification is done using our in-house library
-[SwSpotify](https://github.com/SwagLyrics/SwSpotify) which does it locally for all operating systems.
+## Requirements
 
-The enhanced user experience is possible due to the [backend](https://github.com/SwagLyrics/swaglyrics-issue-maker)
-which manages creating issues for unsupported songs and then adding support for them where possible by employing various
-techniques. Any song with lyrics on Genius can be supported without any user interaction owing to the backend.
-If say, lyrics do not exist for a track then subsequent playings of that track will not waste your resources in trying
-to fetch lyrics, this is done by a [master list of unsupported songs](https://aadibajpai.pythonanywhere.com) which is
-handled by the backend as well.
+Python 3
 
-<a href="https://colab.research.google.com/gist/aadibajpai/439cd358b001ae7d1ba970b68f70d92b/swaglyrics_test.ipynb" id="footnote1">
-1. <small>[results]</small></a> Tested against <a href=https://github.com/johnwmillr/LyricsGenius>LyricsGenius</a>, the most popular
-similar package on the US Top 50 Chart on Spotify. SwagLyrics was fractionally more accurate and 2.4x times faster.
-<a href=#a1>↩</a>
-<br>
-<a href="https://colab.research.google.com/gist/aadibajpai/06a596ad753007b0faea132e96f372e0/swaglyrics_test.ipynb" id="footnote2">
-2. <small>[results]</small></a> Speed and accuracy benchmark using Google Colab on the Spotify US Top 50 chart.
-<a href=#a2>↩</a>
+Python Library: swaglyrics (can be installed using command: pip install swaglyrics)
 
-## Installation
+## How to use
 
-Requires Python 3.6+. Use pip or pip3 depending on your installation. You might want to use the `--user` flag on Linux to
-avoid using pip as root.
+1. Setup the program by running the command in CMD of you system. Command is: python setup.py
 
-```
-pip install swaglyrics
-```
+2. In command prompt run command 'swaglyrics' with an arguement as follow:
+  Arguements          Actions
+  -h, --help          show this help message and exit
+  -t, --tab           Display lyrics in a browser tab.
+  -c, --cli           Display lyrics in the command-line.
+  -n, --no-issue      Disable issue-making on cli.
+  -u, --update-check  Force check for updates.
 
-### Arch Linux
-
-Arch Linux users can directly install SwagLyrics from AUR ([swaglyrics<sup>AUR</sup>](https://aur.archlinux.org/packages/swaglyrics/)). Using `yay`:
-
-```
-yay -S swaglyrics
-```
-
-### Nix
-
-Nix users on any Linux distro and NixOS can install SwagLyrics from Nixpkgs.
-
-```
-nix-env -i swaglyrics
-```
-
+<!--
 ## Usage
 
 `usage: swaglyrics [-h] [-t] [-c] [-n]`
