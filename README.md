@@ -29,11 +29,17 @@ Python Library: swaglyrics (can be installed using command: pip install swaglyri
 1. Setup the program by running the command in CMD of you system. Command is: python setup.py
 
 2. In command prompt run command 'swaglyrics' with an arguement as follow:
+
   Arguements          Actions
+
   -h, --help          show this help message and exit
+
   -t, --tab           Display lyrics in a browser tab.
+
   -c, --cli           Display lyrics in the command-line.
+
   -n, --no-issue      Disable issue-making on cli.
+
   -u, --update-check  Force check for updates.
 
 <!--
