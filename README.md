@@ -30,6 +30,7 @@ Python Library: swaglyrics (can be installed using command: pip install swaglyri
 
 2. In command prompt run command 'swaglyrics' with an arguement as follow:
 
+``` text
   Arguements          Actions
 
   -h, --help          show this help message and exit
@@ -41,6 +42,7 @@ Python Library: swaglyrics (can be installed using command: pip install swaglyri
   -n, --no-issue      Disable issue-making on cli.
 
   -u, --update-check  Force check for updates.
+```
 
 <!--
 ## Usage
