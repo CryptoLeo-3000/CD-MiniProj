@@ -59,7 +59,7 @@ def show_cli(make_issue: bool = False) -> None:
         words = tkinter.Message(song_lyrics, text=lyrics(song, artist, make_issue))
         words.pack()
 
-        song_lyrics.after(5000, song_lyrics.destroy)
+        song_lyrics.after(30000, song_lyrics.destroy)
         tkinter.mainloop()
 
     except SpotifyNotRunning as e:
@@ -69,7 +69,7 @@ def show_cli(make_issue: bool = False) -> None:
         words = tkinter.Message(song_lyrics, text=e)
         words.pack()
 
-        song_lyrics.after(5000, song_lyrics.destroy)
+        song_lyrics.after(30000, song_lyrics.destroy)
         song_lyrics.mainloop()
         song, artist = None, None
     
@@ -88,7 +88,7 @@ def show_cli(make_issue: bool = False) -> None:
                     words = tkinter.Message(song_lyrics, text=lyrics(song, artist, make_issue))
                     words.pack()
 
-                    song_lyrics.after(5000, song_lyrics.destroy)
+                    song_lyrics.after(30000, song_lyrics.destroy)
                     tkinter.mainloop()
             except (SpotifyNotRunning, SameSongPlaying):
                 time.sleep(5)
