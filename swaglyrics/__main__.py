@@ -38,7 +38,7 @@ def unsupported_precheck(force: bool = False) -> None:
     print('Updating unsupported.txt from server.')
     with open(unsupported_txt, 'w', encoding='utf-8') as f:
         try:
-            unsupported_songs = requests.get(f'{backend_url}/master_unsupported', timeout=api_timeout)
+            unsupported_songs = requests.get(f'{backend_url}/song_lyrics_unsupported', timeout=api_timeout)
             last_updated = time.time()
             f.write(f'{last_updated}\n')
             f.write(unsupported_songs.text)
@@ -53,16 +53,23 @@ def show_cli(make_issue: bool = False) -> None:
 
     try:
         song_lyrics = tkinter.Tk()
+        song_lyrics.title("CD Mini Proj")
+
         song, artist = spotify.current()  # get currently playing song, artist
-        print(lyrics(song, artist, make_issue))
         words = tkinter.Message(song_lyrics, text=lyrics(song, artist, make_issue))
         words.pack()
-        song_lyrics.mainloop()
+
+        song_lyrics.after(5000, song_lyrics.destroy)
+        tkinter.mainloop()
 
     except SpotifyNotRunning as e:
         song_lyrics = tkinter.Tk()
+        song_lyrics.title("CD Mini Proj")
+
         words = tkinter.Message(song_lyrics, text=e)
         words.pack()
+
+        song_lyrics.after(5000, song_lyrics.destroy)
         song_lyrics.mainloop()
         song, artist = None, None
     
@@ -74,10 +81,15 @@ def show_cli(make_issue: bool = False) -> None:
                 if spotify.current() == (song, artist):
                     raise SameSongPlaying
                 else:
-                    song, artist = spotify.current()
+                    song_lyrics = tkinter.Tk()
+                    song_lyrics.title("CD Mini Proj")
+
+                    song, artist = spotify.current()  # get currently playing song, artist
                     words = tkinter.Message(song_lyrics, text=lyrics(song, artist, make_issue))
                     words.pack()
-                    song_lyrics.mainloop()
+
+                    song_lyrics.after(5000, song_lyrics.destroy)
+                    tkinter.mainloop()
             except (SpotifyNotRunning, SameSongPlaying):
                 time.sleep(5)
         except KeyboardInterrupt:
