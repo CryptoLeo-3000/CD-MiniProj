@@ -1,26 +1,15 @@
 import time
-import tkinter
+import tkinter as tk
+from tkinter import Message, messagebox
+from typing import Text
 
-master = tkinter.Tk()
+root = tk.Tk()
 
-words = tkinter.Message(master, text="Hello World")
+words = Message(root, text="hello Wrld")
 words.pack()
 
-master.after(5000, master.destroy)
-tkinter.mainloop()
+# time.sleep(10)
 
-master = tkinter.Tk()
+# words.config(text="Hello World")
 
-words = tkinter.Message(master, text="Hello World Again")
-words.pack()
-
-master.after(5000, master.destroy)
-master.mainloop()
-
-master = tkinter.Tk()
-
-words = tkinter.Message(master, text="Hello World Once More")
-words.pack()
-
-master.after(5000, master.destroy)
-tkinter.mainloop()
+root.mainloop()
