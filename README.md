@@ -16,7 +16,7 @@ Kartik Padave
 
 The program is based on use of Regular Expression.
 
-It Fetches the currently playing song from Spotify on Windows, Linux and macOS and displays the lyrics in the command-line, browser tab or in a desktop application (based on what the user selects).
+It Fetches the currently playing song from Spotify on Windows, Linux and macOS and displays the lyrics in the command-line. The song changes automatically after you change the song or after the song end and next one starts.
 
 ## Requirements
 
@@ -26,20 +26,8 @@ Python Library: swaglyrics (can be installed using command: pip install swaglyri
 
 ## How to use
 
-1. Setup the program by running the command in CMD of you system. Command is: python setup.py
+Run command: python __main__.py in your command prompt.
 
-2. In command prompt run command 'swaglyrics' with an arguement as follow:
+Lyrcis of your currently playng spotify song will be displayed.
 
-``` text
-  Arguements          Actions
-
-  -h, --help          show this help message and exit
-
-  -t, --tab           Display lyrics in a browser tab.
-
-  -c, --cli           Display lyrics in the command-line.
-
-  -n, --no-issue      Disable issue-making on cli.
-
-  -u, --update-check  Force check for updates.
-```
+To exit press ctrl+c.
