@@ -1,4 +1,0 @@
-include swaglyrics/static/*
-include swaglyrics/templates/*
-include swaglyrics/unsupported.txt
-include swaglyrics/USING.txt
