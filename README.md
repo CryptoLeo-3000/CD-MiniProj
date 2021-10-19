@@ -26,8 +26,10 @@ Python Library: swaglyrics (can be installed using command: pip install swaglyri
 
 ## How to use
 
-Run command: python __main__.py in your command prompt.
+The executable file is available in CMDExperiment branch in the dist folder.
 
-Lyrcis of your currently playng spotify song will be displayed.
+You don't require any other file or folder to run the executable files.
 
-To exit press ctrl+c.
+Note:
+
+If you are a developer then the files with different changes and configuration is in various branches.
