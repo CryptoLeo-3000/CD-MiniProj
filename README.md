@@ -22,7 +22,11 @@ It Fetches the currently playing song from Spotify on Windows, Linux and macOS a
 
 Python 3
 
-Python Library: swaglyrics (can be installed using command: pip install swaglyrics)
+Python Library:
+
+swaglyrics (can be installed using command: pip install swaglyrics)
+
+SwSpotify (python library for fetching song data from currently playing spotfify song).
 
 ## How to use
 
